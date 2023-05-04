@@ -11,8 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-         repository: meruzhnahapetyan/infra/terraform
-         path: terraform
+         repository: meruzhnahapetyan/infra
+         path: infra
          ref: main
          submodules: recursive
 
