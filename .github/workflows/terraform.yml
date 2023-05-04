@@ -23,7 +23,9 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -var-file=terraform.tfvars
+        run: |
+         ls -R 
+         terraform plan -var-file=terraform.tfvars
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
 
