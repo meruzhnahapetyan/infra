@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v2
         with:
          repository: meruzhnahapetyan/infra
+         path: terraform
          ref: main
 
       - name: Configure AWS credentials
