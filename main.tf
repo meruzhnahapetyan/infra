@@ -1,6 +1,6 @@
 
 module "vpc-dev" {
-    source = "../../../terraform-module-infra"
+    source = "../../terraform-module-infra"
     cidr_block = var.cidr_block
     public_subnet_cidr_blocks = var.public_subnet_cidr_blocks
     private_subnet_cidr_blocks = var.private_subnet_cidr_blocks
