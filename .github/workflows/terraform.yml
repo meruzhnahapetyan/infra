@@ -24,6 +24,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: |
+         cd /Users/meruzh/Desktop/dev/infra/.github/workflows
          ls -R 
          terraform plan -var-file=terraform.tfvars
         env:
