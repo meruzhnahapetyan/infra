@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-         repository: meruzhnahapetyan/infra/terraform/
+         repository: meruzhnahapetyan/infra
          ref: main
 
       - name: Configure AWS credentials
