@@ -5,7 +5,7 @@ on:
         - main
 jobs:
   terraform:
-    name: 'Terraform-workflow'
+    name: 'Terraform'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,7 +18,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2
 
-      - name: Terraform fmt-fmt
+      - name: Terraform fmt
         id: fmt
         run: |
          cd ./terraform 
