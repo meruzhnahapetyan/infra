@@ -19,23 +19,20 @@ jobs:
           aws-region: us-west-2
 
       - name: Terraform fmt
-        working-directory: ${{ github.workspace }}/terraform
         id: fmt
-        run: terraform fmt
+        run: terraform fmt ./terraform
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
 
       - name: Terraform Init
-        working-directory: ${{ github.workspace }}/terraform
         id: init
-        run: terraform init
+        run: terraform init ./terraform
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}     
 
       - name: Terraform Plan
-        working-directory: ${{ github.workspace }}/terraform
         id: plan
-        run: terraform plan
+        run: terraform plan ./terraform
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
 
