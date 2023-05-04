@@ -20,19 +20,19 @@ jobs:
 
       - name: Terraform fmt
         id: fmt
-        run: terraform fmt ./terraform
+        run: terraform fmt -chdir=./terraform
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
 
       - name: Terraform Init
         id: init
-        run: terraform init ./terraform
+        run: terraform init -chdir=./terraform
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}     
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan ./terraform
+        run: terraform plan -chdir=./terraform
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
 
