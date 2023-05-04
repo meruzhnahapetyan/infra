@@ -23,7 +23,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -chdir=/Users/meruzh/Desktop/dev/infra 
+        run: terraform plan -var-file=terraform.tfvars
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
 
