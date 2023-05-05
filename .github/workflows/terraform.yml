@@ -20,25 +20,22 @@ jobs:
 
       - name: Terraform fmt
         id: fmt
-        run: |
-         cd ./terraform 
-         terraform fmt
+        working-directory: ./terraform 
+        run: terraform fmt
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
 
       - name: Terraform Init
         id: init
-        run: |
-         cd ./terraform 
-         terraform init
+        working-directory: ./terraform 
+        run: terraform init
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}     
 
       - name: Terraform Plan
         id: plan
-        run: |
-         cd ./terraform 
-         terraform plan
+        working-directory: ./terraform 
+        run: terraform plan
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
 
